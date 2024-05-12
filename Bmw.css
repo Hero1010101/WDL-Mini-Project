@@ -1,0 +1,307 @@
+*{ padding:0px;
+    margin:0px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+  }
+
+  .body{
+    overflow-x: hidden;
+  }
+
+  .logo{
+   height:80px;
+   width: 140px;
+   position: absolute;
+   top: 12px;
+   left: 105px;
+  }
+ .Header{ 
+    padding:10px;
+    height: 80px;
+    color:White;
+    background-image: linear-gradient(to right, black, midnightblue);
+    border-style:solid;
+    border-color: cyan;
+    border-width:2px;
+    border-radius:10px;
+   }
+   .Head{
+       font-size: 40px;
+       font-weight: 600;
+       padding: 16px;
+   }
+   
+   .menus{
+    position: relative;
+    top: -70px;
+    left: 1000px;
+   }
+   .menus ul li{
+    padding: 5px;
+    list-style: none;
+    justify-content: space-evenly;
+    display: inline-block;
+   }
+   .menus li a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+   }
+   .menus ul li a:hover{
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   }
+   /* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover{
+    color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+  }
+  
+  /* Dropdown Content (Initially Visible) */
+  .dropdown-content {
+    padding: 5px;
+    display: block; /* Initially visible */
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    min-width: 160px;
+    z-index: 1;
+    display: none;
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: transparent;}
+  
+  /* Show the dropdown menu when button is clicked */
+  .dropdown.clicked .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown.clicked .dropbtn {
+    background-color: transparent;
+  }
+  
+
+   
+   .maincarinfo{
+    height: 1500px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: cyan;
+    background: linear-gradient(royalblue 600px,white 1020px);
+    z-index: -10;
+    background-image: url("bimg3.jpg");
+    background-size: 1300px;
+   }
+
+   
+   #car1{
+    height: 600px;
+    width: 1100px;
+    position: absolute;
+    top: 500px;
+    left: 200px;
+   }
+
+   .speed{
+    height: 180px;
+    width: 320px;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    border-radius: 25px;
+    align-items: center;
+    z-index: 1;
+    align-content: center;
+   }
+   .engine{
+    height: 300px;
+    width: 520px;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    border-radius: 25px;
+    align-items: center;
+    z-index: 1;
+    align-content: center;
+    justify-content: space-evenly;
+   }
+
+   
+   .transmission{
+    height: 180px;
+    width: 320px;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    top: 300px;
+    left: 1100px;
+    border-radius: 25px;
+    align-items: center;
+    z-index: 1;
+    align-content: center;
+   }
+
+   #carmodel{
+    text-align: center;
+    padding: 20px;
+    color: white;
+   }
+
+   .varianttable table{
+    height: 400px;
+    width: 800px;
+    color: white;
+    background-color: transparent;
+    padding: 20px;
+    position: absolute;
+    top: 1150px;
+    left: 400px;
+    border-radius: 10px;
+   }
+   .varianttable th{
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    font-weight: 400;
+   }
+
+   .varianttable tr{
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    font-weight: 400;
+   }
+
+   .varianttable td{
+    border-radius: 10px;
+    font-weight: 400;
+   }
+
+   .bookride a{
+    padding: 10px;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    position: absolute;
+    top: 1080px;
+    left: 600px;
+   }
+
+   .footer{
+    height: 400px;
+    background-color: brown;
+    border-radius: 10px;
+    border: solid 2px cyan;
+   }
+
+   #flogo{
+    height:180px;
+    width: 320px;
+    position: relative;
+    top: 120px;
+    left: 1240px;
+   }
+
+   .footerele{
+    position: relative;
+    top: -80px;
+    display: flex;
+    justify-content: space-evenly;
+   }
+
+   .footerele h1{
+    color: white;
+    cursor: default;
+   }
+
+   .footerele ul li{
+    padding: 10px;
+    justify-content: space-evenly;
+    list-style: none;
+   }
+
+   .footerele li a{
+    padding: 5px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+   }
+
+   .footerele ul li a:hover{
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(5, 114, 203);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: 300ms ease-in-out;
+   }
+
+   #cr{
+    text-align: center;
+    position: relative;
+    top: -30px;
+    font-weight: 400;
+   }

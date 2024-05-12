@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Test-Drive Booking</title>
+    <link rel="stylesheet" href="bmw.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        form {
+            font-size: 20px;
+            width: 400px;
+            padding: 30px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            background-color: rgb(39, 39, 39);
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px;
+        }
+
+        select, input{
+            background-color: rgb(39, 39, 39);
+            color: white;
+            border-color: crimson;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        button{
+            background-color: black;
+            font-size: 20px;
+            color: white;
+            border-radius: 10px;
+            border-color: violet;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+            font-size: 21px;
+            border-radius: 10px;
+            transition: 600ms;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Car Test Drive Booking</h1>
+    <form id="bookingForm">
+        <label for="carModel">Car Model:</label>
+        <select id="carModel">
+            <option value="Model A">Model A</option>
+            <option value="Model B">Model B</option>
+            <option value="Model C">Model C</option>
+        </select><br><br>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date"><br><br>
+        <label for="coupon">Coupon Code:</label>
+        <input type="text" id="coupon"><br><br>
+        <button type="button" onclick="calculatePrice()">Calculate Price</button><br><br>
+        <div id="price"></div>
+    </form>
+
+    <script>
+        function calculatePrice() {
+            // Price list for test drives
+            const carPrices = {
+                "Model A": 50,
+                "Model B": 70,
+                "Model C": 90
+            };
+
+            // Get user inputs
+            const selectedModel = document.getElementById('carModel').value;
+            const preferredDate = document.getElementById('date').value;
+            const couponCode = document.getElementById('coupon').value;
+
+            // Calculate price
+            let price = carPrices[selectedModel] || 0;
+            let couponDiscount = 0;
+
+            // Apply coupon code if provided
+            if (couponCode.trim() !== '') {
+                // Assuming coupon code "SAVE10" for 10% discount
+                if (couponCode === 'SAVE10') {
+                    couponDiscount = Math.round(price * 0.1);
+                } else {
+                    // Invalid coupon code
+                    alert("Invalid coupon code. Please try again.");
+                    return;
+                }
+            }
+
+            // Calculate total price after discount
+            let totalPrice = price - couponDiscount;
+
+            // Display price
+            document.getElementById('price').innerHTML = `Test Drive Price for ${selectedModel}: $${totalPrice} (Coupon Applied: -$${couponDiscount})`;
+        }
+    </script>
+</body>
+</html>
